@@ -1,0 +1,25 @@
+.btn {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateX(10rem);
+}
+
+.button {
+    &__autoComplete {
+        &,
+        &:link,
+        &:visited {
+            border: none;
+            text-decoration: none;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}

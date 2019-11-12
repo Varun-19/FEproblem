@@ -1,0 +1,165 @@
+.section-findFalcone {
+    background-color: $color-grey-light-1; 
+    width: 100%;
+    height: 100vh;
+ }
+ 
+ .section-findFalcone__time {
+    height: 52rem;
+    width: 100%;
+    position: relative;
+
+    .findFalcone-time {
+        position: absolute;
+        top: 50%;
+        left: 25%;  
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        &__value {
+            font-size: 4.8rem;
+        }
+
+        &__heading {
+            font-weight: 400;
+        }
+        
+    } 
+}
+
+.findFalcone {
+
+    &__all {
+        position: relative;
+        transition: all .3s ease;
+
+
+        .fa-minus-circle {
+            position: absolute;
+            font-size: 2.5rem;
+            top: 50%;
+            right:5%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: $color-secondary-dark;
+        }
+
+        &-selected {
+            transition: all .3s all;
+            transform: skewX(-5deg);
+            margin: 2rem 0;
+            font-size: 1.8rem;
+            color: $color-white;
+            border: 2px solid $color-secondary-light;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            display: flex;
+            justify-content: space-evenly;
+            background-image: linear-gradient(to right, $color-secondary-dark, $color-secondary-light);
+            -webkit-background-clip: text;
+            -webkit-transform: skewX(-5deg);
+            -moz-transform: skewX(-5deg);
+            -ms-transform: skewX(-5deg);
+            -o-transform: skewX(-5deg);
+            position: relative;
+        
+            &__planet{
+                margin: 1rem 0;
+                padding: 1rem;
+                border-radius: 3px;
+                color: transparent;
+                display: inline-block;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+            }
+    
+            &__vehicle {
+                margin: 1rem 0;
+                padding: 1rem;
+                border-radius: 3px;
+                color:transparent;
+                display: inline-block;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;  
+            }
+        }
+
+        &:hover {    
+            .findFalcone__all-selected {
+                transform: translateX(-7.5rem);
+            } 
+
+            .fa-minus-circle {
+                opacity: 1;
+
+                &:hover {
+                    transform: translate(-50%, -50%) translateY(-.3rem);
+                    &::after {
+                        transform: scaleY(1.6);
+                        opacity: 1;
+                     }
+                }
+
+                &:active,
+                &:focus {
+                    outline: none;
+                    transform: translate(-50%, -50%) translateY(-.1rem);
+                }
+
+            }
+        }
+    }
+
+    &-success {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        &__text {
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 2.4rem;
+            font-weight: 200;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    }
+
+
+    &-collections{
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
+    }
+    
+    &-heading {
+        text-align: center;
+        font-weight: 200;
+    }
+
+    &__search {
+        transition: all .5s ease;
+    }
+
+    &__autocomplete {
+       transform: translateX(25rem) translateY(10rem);
+       display: inline-block;
+    }
+}
+
+/* 
+background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+Colors — 020204, 464C58, 59160B, D04A0B, F2C225, B0BFB7, 5A8397*/
